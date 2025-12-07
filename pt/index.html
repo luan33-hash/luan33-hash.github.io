@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luiz Ramos — Portfólio: Comunicação, RP & Suporte Administrativo</title>
+  <meta name="description" content="Portfólio de Luiz Ramos, com foco em Comunicação Institucional, Relações Públicas e Suporte Administrativo." />
+  <link rel="alternate" hreflang="pt-BR" href="https://luan33-hash.github.io/pt/">
+  <link rel="alternate" hreflang="en" href="https://luan33-hash.github.io/">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom styles and color palette based on Tailwind */
+    :root {
+      --color-primary: #1e40af; /* Blue-900 */
+      --color-secondary: #fcd34d; /* Amber-300 */
+      --color-background: #f9fafb; /* Gray-50 */
+      --color-text: #1f2937; /* Gray-800 */
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--color-background);
+      color: var(--color-text);
+    }
+    .site-header {
+      background-color: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    .brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+    .main-nav a {
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s;
+      color: var(--color-text);
+      text-decoration: none;
+    }
+    .main-nav a:hover {
+      color: var(--color-primary);
+    }
+    .btn {
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      transition: background-color 0.3s, border-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .primary {
+      background-color: var(--color-primary);
+      color: white;
+    }
+    .ghost {
+      border: 1px solid var(--color-primary);
+      color: var(--color-primary);
+    }
+    .primary:hover {
+      background-color: #1e3a8a;
+    }
+    .ghost:hover {
+      background-color: var(--color-primary);
+      color: white;
+    }
+    .hero {
+      padding: 4rem 0;
+      background-color: white;
+    }
+    .hero > .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .hero-content {
+      flex: 3;
+      min-width: 300px;
+    }
+    .hero-content h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: var(--color-primary);
+    }
+    .lead {
+      font-size: 1.25rem;
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+    }
+    .hero-img {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: var(--color-secondary);
+      color: var(--color-primary);
+      font-size: 3rem;
+      font-weight: 900;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .section {
+      padding: 3rem 0;
+    }
+    .section h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--color-text);
+      border-bottom: 3px solid var(--color-secondary);
+      display: inline-block;
+      padding-bottom: 0.25rem;
+    }
+    .skills-grid, .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      border-left: 4px solid var(--color-primary);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    .card h4 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: var(--color-primary);
+    }
+    .card-desc {
+        color: #4b5563;
+        margin-bottom: 0.75rem;
+    }
+    .card-meta {
+        font-size: 0.9rem;
+        color: #9ca3af;
+        font-style: italic;
+    }
+    .site-footer {
+        background-color: var(--color-text);
+        color: white;
+        padding: 1.5rem 0;
+    }
+    .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 0.9rem;
+    }
+    .socials a {
+        margin-left: 1rem;
+        color: var(--color-secondary);
+        text-decoration: none;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 640px) {
+      .header-inner {
+        flex-direction: column;
+      }
+      .main-nav {
+        margin-top: 1rem;
+      }
+      .main-nav a {
+        margin: 0 0.5rem;
+      }
+      .hero > .container {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .cta-row {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .socials {
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">LUIZ RAMOS</h1>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#expertise">Especialidades</a>
+        <a href="#experience">Experiência</a>
+        <a href="#contact">Contato</a>
+        <a class="btn primary" href="mailto:luan33@gmail.com">Contate-me</a>
+        <a class="btn ghost" href="/">English</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h2>Olá — sou Luiz Ramos</h2>
+          <p class="lead">Profissional multidisciplinar com especialização em Comunicação Institucional, Suporte Administrativo e Gestão de Processos.</p>
+          <p class="cta-row">
+            <a class="btn primary" href="#expertise">Ver Competências</a>
+            <a class="btn ghost" href="#experience">Minha Experiência</a>
+          </p>
+        </div>
+        <div class="hero-img" aria-hidden="true">
+          <!-- Placeholder for Luiz Angelo Ramos -->
+          <div class="avatar">LR</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise" class="section expertise">
+      <div class="container">
+        <h3>Especialidades</h3>
+        <p class="muted text-sm text-gray-500 mb-6">Integro conhecimento jurídico, organização técnica e comunicação executiva para otimizar operações.</p>
+
+        <div class="skills-grid">
+          <article class="card">
+            <h4>Comunicação Institucional & Cerimonial</h4>
+            <p class="card-desc">Atuação em relacionamento com a mídia, assessoria de imprensa, condução de eventos (cerimonial) e manutenção de comunicação institucional consistente.</p>
+            <p class="card-meta">Oratória • Comunicação Pública • Gestão de Eventos</p>
+          </article>
+
+          <article class="card">
+            <h4>Gestão Administrativa & Processos</h4>
+            <p class="card-desc">Capacidade comprovada de organizar logística complexa, gerir recursos e implementar processos eficientes para reduzir desperdício administrativo.</p>
+            <p class="card-meta">Otimização de Processos • Gestão de Recursos • Coordenação Logística</p>
+          </article>
+
+          <article class="card">
+            <h4>Suporte de TI & Resolução Técnica</h4>
+            <p class="card-desc">Conhecimento avançado em TI, manutenção de computadores, configuração de redes e suporte técnico com soluções passo a passo para clientes.</p>
+            <p class="card-meta">Implementação de Redes • Suporte ao Usuário • TI Avançado</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section experience bg-white">
+      <div class="container">
+        <h3>Destaques de Experiência</h3>
+        <p class="muted text-sm text-gray-500 mb-6">Conquistas selecionadas que demonstram rigor administrativo e gestão da comunicação.</p>
+
+        <div class="projects-grid" id="experience-grid">
+          
+          <!-- Experience Highlight 1: Process Improvement (from City Hall role) -->
+          <article class="card">
+            <h4>Gestão de Processos & Recursos</h4>
+            <p class="card-desc">Contribuição chave na implementação de processos mais eficientes na equipe de comunicação, resultando em redução de recursos e maior estabilidade operacional.</p>
+            <p class="card-meta">Prefeitura de Poços de Caldas • Desde 1998</p>
+          </article>
+
+          <!-- Experience Highlight 2: Logistics & Coordination (from Technical Specialist role) -->
+          <article class="card">
+            <h4>Coordenação Administrativa & Logística</h4>
+            <p class="card-desc">Gerenciamento da coordenação administrativa e logística para equipes de comunicação e RP, garantindo organização na divulgação de ações e campanhas oficiais.</p>
+            <p class="card-meta">Relações Públicas e Comunicação Social • Desde 2015</p>
+          </article>
+
+          <!-- Experience Highlight 3: Compliance & Legal Insight -->
+          <article class="card">
+            <h4>Conformidade Legal & Estratégia de Dados</h4>
+            <p class="card-desc">Garantia de conformidade com diretrizes regulatórias (LGPD) em publicidade nas redes sociais e estratégias de captação, mitigando riscos legais para a organização.</p>
+            <p class="card-meta">Formação em Direito (LL.B.) • Foco em Marketing Digital</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h3>Competências Técnicas e Idiomas</h3>
+            <div class="about-grid">
+                <div>
+                    <h4 class="text-xl font-semibold mb-2 text-blue-800">Administração & TI</h4>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>Suporte técnico ao cliente e resolução de problemas.</li>
+                        <li>Manutenção avançada de computadores e implementação de redes.</li>
+                        <li>Domínio do Microsoft Office Suite (Windows, Word, Excel).</li>
+                        <li>Resolução de problemas: identificação, análise e soluções passo a passo.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-2 text-blue-800">Idiomas & Direito</h4>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>Português: Língua nativa</li>
+                        <li>Inglês: Intermediário superior</li>
+                        <li>Espanhol: Avançado</li>
+                        <li>Expertise regulatória: Formação em Direito (LL.B.) e conformidade com LGPD.</li>
+                    </ul>
+                    <p class="mt-4"><a href="mailto:luan33@gmail.com" class="btn primary">Enviar E-mail</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact bg-gray-100">
+      <div class="container">
+        <h3>Contato — Luiz Ramos</h3>
+        <p>Estou em busca de oportunidade como Assistente Administrativo e disponível para entrevistas imediatas. Conecte-se no LinkedIn ou envie um e-mail.</p>
+
+        <!-- Simplified Contact Form - Data is not actually sent in this environment -->
+        <form id="contact-form" class="contact-form p-6 bg-white rounded-xl shadow-lg mt-4 max-w-xl mx-auto" onsubmit="alert('Obrigado pela mensagem! Este formulário é uma simulação; por favor, entre em contato diretamente por e-mail.'); return false;">
+          <label class="block mb-4">
+            <span class="text-gray-700">Nome</span>
+            <input type="text" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border" required />
+          </label>
+
+          <label class="block mb-4">
+            <span class="text-gray-700">E-mail</span>
+            <input type="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border" required />
+          </label>
+
+          <label class="block mb-4">
+            <span class="text-gray-700">Mensagem</span>
+            <textarea name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border" required></textarea>
+          </label>
+
+          <div class="form-actions flex justify-center">
+            <button type="submit" class="btn primary w-full">Enviar Mensagem</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>&copy; <span id="year"></span> Luiz Ramos — Preparado para o sucesso</small>
+      <div class="socials">
+        <a href="mailto:luan33@gmail.com">E-mail</a>
+        <a href="https://www.linkedin.com/in/luiz-angelo-49b95b380" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+  </script>
+</body>
+</html>
